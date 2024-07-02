@@ -1,15 +1,16 @@
-provider "aws"{
-region="ap-south-1"
+provider "aws" {
+region = "us-east-2"
 }
 
-
-resource "aws_instance" "AWSEC2Instance"{
-ami = "ami-0cc9838aa7ab1dce7"
+resource "aws_instance" "AWSInstance"{
+ami = "ami-08be1e3e6c338b037"
 instance_type = "t2.micro"
-key_name = "devopsmssmay"
+key_name = "sairitwik"
 security_groups = ["launch-wizard-2"]
-tags={
-Name = "terraformserver"
+tags = {
+Name = "tomcatservers"
+ }
 }
-}
+
+
 
